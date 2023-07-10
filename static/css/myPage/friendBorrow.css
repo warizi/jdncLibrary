@@ -1,0 +1,245 @@
+main {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+.main_title > h2 {
+    display: block;
+    padding: 30px 0;
+    width: 300px;
+    padding-right: 25px;
+    height: 100px;
+    border-bottom: 5px solid black;
+}
+.main_title > h2 {
+    width: 275px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.main_contents {
+    width: 100%;
+    padding-left: 25px;
+}
+.main_contents_title {
+    position: relative;
+}
+.main_contents_title > h2 {
+    width: 100%;
+    padding: 40px 0 15px;
+    font-size: 34px;
+    color: #1d1d1d;
+}
+/* main nav */
+.my_category {
+    padding: 20px 0 50px 10px;
+    font-size: 20px;
+}
+.category_item {
+    line-height: 40px;
+    display: block;
+}
+.category_item:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.category_active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 컨텐츠 */
+.friends_borrow_list_container {
+    width: auto;
+    height: 1400px;
+    background-color: #ececec;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+/* 책 리스트 박스 */
+.list_container {
+    width: 880px;
+    height: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3, calc(860px / 3));
+    grid-template-rows: repeat(3, 400px);
+    grid-auto-flow: row;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+/* 책 리스트 아이템 */
+.book_list_item {
+    position: relative;
+    background-color: green;
+    width: calc(860px / 3);
+    border-radius: 10px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.book_cover {
+    width: calc(860px / 3);
+    border-radius: 10px;
+    height: 400px;
+    z-index: 10;
+    transition: 0.2s;
+}
+.book_detail {
+    padding: 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(860px / 3);
+    border-radius: 10px;
+    height: 400px;
+    z-index: 11;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.book_list_item:hover > .book_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.book_list_item:hover > .book_cover {
+    transform: scale(110%);
+}
+.book_detail > h4 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.book_detail > span {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.borrow_btn {
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    z-index: 100;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.owner_name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 35px;
+    background-color: white;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 10px 0 0 0;
+    z-index: 12;
+}
+/* page */
+.page_control {
+    text-align: center;
+}
+.btn_style {
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.page_count {
+    margin: 0 10px;
+}
+
+/* 빌리기 요청 */
+.request_btn {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    text-align: center;
+    padding: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.request_borrow_modal {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    top: 40px;
+    right: 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 100;
+}
+.request_borrow_item {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 10px;
+    line-height: 60px;
+    padding: 0 10px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2)
+}
+.request_username {
+    display: inline-block;
+}
+.request_book_title {
+    display: inline-block;
+    width: 260px;
+    height: 60px;
+    overflow: hidden;
+}
+.friend_borrow_btn {
+    border: none;
+    border-radius: 10px;
+    background-color: #1d57bd;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+    line-height: 40px;
+}
+.request_book_cover:hover {
+    transform: scale(200%);
+    transition: 0.3s;
+}
+.modal_hidden .request_borrow_modal {
+    transition: 0.3s;
+    transform: translateX(250px) translateY(-250px) scale(0);
+}
+.modal_btn {
+    cursor: pointer;
+}
+.request_count_notice {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    line-height: 20px;
+    font-size: 12px;
+    background-color: red;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    overflow: hidden;
+}
